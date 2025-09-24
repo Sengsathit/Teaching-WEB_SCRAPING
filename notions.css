@@ -1,0 +1,9 @@
+.container {
+    color: red;;
+}
+
+
+section p:first-child { color: brown; }    /* premier enfant de la section si c’est un <p> (Paragraphe 1) */
+section p:last-child { color: pink; }      /* dernier <p> de la section (Paragraphe 3) */
+section p:nth-child(2) { color: teal; }    /* le 2ème enfant de section si c’est un <p> (ici ce sera le <div>, donc rien) */
+section p:nth-of-type(2) { color: gold; } 

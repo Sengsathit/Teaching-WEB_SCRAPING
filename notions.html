@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <!-- Métadonnées / HEAD TAG -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Démo HTML : structure, titres, paragraphes, listes, liens, tableaux, grouping</title>
+  <meta name="description" content="Page de démonstration couvrant doctype, head, body, titres, paragraphes, listes, liens, tableaux et balises de regroupement.">
+</head>
+<body>
+  <!-- BODY TAG -->
+  <a id="haut"></a>
+  <header>
+    <h1>Démo HTML</h1>
+    <p>Cette page illustre DOCTYPE, HEAD, BODY, titres & paragraphes, listes, liens (ancres), tableaux et grouping tags (sémantiques et génériques).</p>
+  </header>
+
+  <!-- NAV + liens d'ancrage (Anchor tags) -->
+  <nav>
+    <a href="#titres-paragraphes">Titres & paragraphes</a> |
+    <a href="#listes">Listes</a> |
+    <a href="#liens">Liens / Ancres</a> |
+    <a href="#tableau">Tableau</a> |
+    <a href="#grouping">Balises de regroupement</a> |
+    <a href="#footer">Bas de page</a> |
+    <a href="https://developer.mozilla.org/fr/" target="_blank" rel="noopener">MDN (externe)</a>
+  </nav>
+
+  <main>
+    <article>
+      <!-- Headings & Paragraphs -->
+      <section id="titres-paragraphes">
+        <h2>1. Titres & paragraphes</h2>
+        <h3>Hiérarchie des titres</h3>
+        <p>Les balises &lt;h1&gt; à &lt;h6&gt; structurent le document. Utilisez un seul &lt;h1&gt; par page, puis des niveaux décroissants.</p>
+        <h4>Exemple</h4>
+        <p>Ce texte est un <strong>paragraphe</strong>. Il peut contenir des <em>emphases</em>, des <a href="#liens">liens</a>, du <code>code inline</code> et d'autres éléments.</p>
+      </section>
+
+      <!-- Lists -->
+      <section id="listes">
+        <h2>2. Listes</h2>
+        <h3>Liste non ordonnée (ul)</h3>
+        <ul>
+          <li>Élément A</li>
+          <li>Élément B
+            <ul>
+              <li>Sous-élément B.1</li>
+              <li>Sous-élément B.2</li>
+            </ul>
+          </li>
+          <li>Élément C</li>
+        </ul>
+        <h3>Liste ordonnée (ol)</h3>
+        <ol>
+          <li>Étape 1</li>
+          <li>Étape 2</li>
+          <li>Étape 3</li>
+        </ol>
+        <h3>Liste de définition (dl)</h3>
+        <dl>
+          <dt>&lt;dt&gt;</dt><dd>Terme défini</dd>
+          <dt>&lt;dd&gt;</dt><dd>Sa définition associée</dd>
+        </dl>
+      </section>
+
+      <!-- Anchor tags -->
+      <section id="liens">
+        <h2>3. Liens (anchor tags)</h2>
+        <p>Les liens se font avec &lt;a href="..."&gt;. Ils peuvent pointer vers :</p>
+        <ul>
+          <li>Une ancre interne sur cette page : <a href="#tableau">Aller au tableau</a></li>
+          <li>Un site externe : <a href="https://www.w3.org/TR/html/" target="_blank" rel="noopener">Spécification HTML</a></li>
+          <li>Un e-mail : <a href="mailto:contact@example.com">contact@example.com</a></li>
+          <li>Un téléphone : <a href="tel:+33123456789">+33 1 23 45 67 89</a></li>
+        </ul>
+      </section>
+
+      <!-- Table -->
+      <section id="tableau">
+        <h2>4. Tableau</h2>
+        <table>
+          <caption>Exemple de tableau sémantique</caption>
+          <thead>
+            <tr>
+              <th scope="col">Produit</th>
+              <th scope="col">Prix</th>
+              <th scope="col">Stock</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Clavier</td>
+              <td>49,90 €</td>
+              <td>✔︎</td>
+            </tr>
+            <tr>
+              <td>Souris</td>
+              <td>29,90 €</td>
+              <td>✔︎</td>
+            </tr>
+            <tr>
+              <td>Écran</td>
+              <td>189,00 €</td>
+              <td>✖︎</td>
+            </tr>
+          </tbody>
+          <tfoot>
+            <tr>
+              <th scope="row">Total articles</th>
+              <td colspan="2">3</td>
+            </tr>
+          </tfoot>
+        </table>
+      </section>
+
+      <!-- Grouping tags -->
+      <section id="grouping">
+        <h2>5. Balises de regroupement (grouping tags)</h2>
+        <h3>Balises sémantiques</h3>
+        <p>Utilisez &lt;section&gt;, &lt;article&gt;, &lt;header&gt;, &lt;footer&gt;, &lt;nav&gt;, &lt;aside&gt;, &lt;main&gt; pour décrire la structure.</p>
+        <h3>Balises génériques</h3>
+        <div>
+          <p>&lt;div&gt; regroupe des blocs. &lt;span&gt; pour du texte inline : <span>exemple avec span</span>.</p>
+        </div>
+        <h3>Figure & figcaption</h3>
+        <figure>
+          <img src="https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg" alt="Logo HTML5" width="120" height="120">
+          <figcaption>Exemple d'illustration avec &lt;figure&gt; et &lt;figcaption&gt;.</figcaption>
+        </figure>
+      </section>
+    </article>
+
+    <aside>
+      <h3>Astuce</h3>
+      <p>La balise &lt;main&gt; doit être unique par page et contenir le contenu central.</p>
+      <p>Pensez aux attributs alt sur les images et scope dans les entêtes de tableau pour l’accessibilité.</p>
+      <p><a href="#haut">Remonter en haut ↑</a></p>
+    </aside>
+  </main>
+
+  <footer id="footer">
+    <p>© 2025 — Démo HTML. <a href="#haut">Haut de page</a></p>
+  </footer>
+</body>
+</html>
